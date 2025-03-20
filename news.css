@@ -1,0 +1,738 @@
+/* General reset for padding, margin, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar .logo-container img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.navbar h1 {
+  font-size: 40px;
+  color: #121f07;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar nav li {
+  margin-right: 20px;
+}
+
+.navbar nav li a {
+  color: rgb(20, 5, 5);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar nav li a:hover {
+  color: rgb(5, 2, 2);
+  background-color: #72e576;
+  text-decoration: underline;
+}
+
+.navbar a i {
+  font-size: 24px;
+  color: black;
+}
+.navbar a i:hover{
+  transform: translatey(-5px);
+}
+
+/* Hide the checkbox input */
+#menu-toggle {
+  display: none;
+}
+
+
+/* Hamburger menu */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(230, 59, 59);
+}
+
+/* Button styles */
+.butt button {
+  background-color: #1db622;
+  color: rgb(6, 4, 4);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.butt button:hover {
+  background-color: rgb(250, 249, 246);
+  border: 2px solid green;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .navbar nav ul {
+    display: none;
+    /* width: 100%; */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar nav ul li a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+  }
+
+  #menu-toggle:checked + label + nav ul {
+    display: flex;
+  }
+}
+
+/* hero-section */
+/* Hero Section Animation */
+.hero-content {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h3 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2a2a2a;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #555;
+  animation: slideInFromRight 1.5s ease-in-out;
+}
+
+/* Image Animation */
+.img img {
+  width: 100%;
+  /* max-height: auto; */
+  object-fit: cover;
+  animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* About Image Responsive */
+.aboutimage {
+  margin-top: -30px;
+}
+
+.aboutimage img {
+  width: 100%;
+  height: 770px; /* Makes it responsive */
+  /* height: 750px; */
+  object-fit: cover;
+}
+
+/* Heading Animations */
+.heading h2 {
+  margin-top: -550px;
+  font-size: 50px;
+  color: rgb(6, 5, 5);
+  padding-bottom: 10px;
+  text-align: center;
+  animation: slideInFromTop 1.5s ease-in-out;
+}
+
+.heading p {
+  margin-bottom: 750px;
+  /* margin-top: -500px; */
+  color: rgb(11, 9, 9);
+  font-size: 20px;
+  text-align: center;
+  animation: slideInFromBottom 1.5s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heading h2 {
+    font-size: 30px;
+    margin-top: -250px;
+  }
+
+  .heading p {
+    font-size: 16px;
+  }
+
+  .aboutimage img {
+    height: auto;
+  }
+
+  .hero-content h3 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+     margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 464px) {
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .blog-post {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .blog-content {
+    padding: 15px;
+  }
+
+  .blog-image img {
+    width: 100%;  /* Full width le lega */
+    height: auto; /* Aspect ratio maintain hoga */
+    max-height: 300px;  /* Height limit fix kar di for better view */
+    object-fit: cover;  /* Image ko proportionately adjust karega */
+  }
+
+  .aboutimage img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;  /* Mobile view ke liye image height ko limit karna */
+  }
+
+  /* Heading ki height and margin adjust karte hain */
+  .heading h2 {
+    font-size: 28px;
+    margin-top: 0; /* Extra margin ko fix kar diya */
+    padding: 10px 0;
+  }
+
+  .heading p {
+    font-size: 16px;
+    text-align: center; /* Center align on small screens */
+    margin-top: 10px;  /* Some spacing below heading */
+  }
+
+  /* Hero section text adjust */
+  .hero-content h3 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+
+  /* Read more button ka size */
+  .read-more {
+    width: 180px;  /* Mobile ke liye chhota button */
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .butt button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* General Blog Container Styling */
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 70px;
+  padding: 50px;
+  background-color: #f7f7f7;
+}
+
+/* Blog Post Styling */
+.blog-post {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  padding-left: 170px;
+  padding-right: 170px;
+  box-shadow: 0 0 10px rgba(100, 46, 46, 0.1);
+}
+
+.blog-post1 {
+  padding-left: 180px;
+  padding-right: 85px;
+  border-radius: 2px solid grey;
+}
+
+/* Blog Image Styling */
+.blog-image {
+  justify-items: center;
+}
+
+.blog-image img {
+  width: 800px;
+  height: auto;
+}
+
+/* Blog Content Styling */
+.blog-content {
+  padding: 20px;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+/* Blog Title and Excerpt */
+.blog-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2e7d32;
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  text-align: justify;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Read More Button Styling */
+.read-more {
+  background-color: #009444;
+  border-style: none;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  height: 70px;
+  font-size: 24px;
+  width: 250px;
+  cursor: pointer;
+}
+
+.read-more:hover {
+  background-color: rgb(255, 255, 255);
+  color: #009444;
+  border: 2px solid;
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 25px;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .blog-post {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .blog-image img {
+    width: 100%;
+  }
+
+  .blog-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .blog-excerpt {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .read-more {
+    height: 50px;
+    font-size: 18px;
+    width: 200px;
+  }
+
+  .pagination a {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+}
+
+
+
+/* footer */
+.upper {
+  position: relative;
+  background: url("./images2/upperfooter.jpg") no-repeat center center/cover;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-top: -150px;
+}
+
+.upper .upper-content {
+  h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+
+  .btn:hover {
+    background-color: white;
+    color: #009444;
+    border: 2px solid #009444;
+  }
+}
+
+.footer {
+  background-color: #033403;
+  color: white;
+  padding: 40px 0;
+}
+
+.footer .foot {
+  padding-left: 90px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer .foot > div {
+  flex: 1;
+  margin: 10px;
+}
+
+.foot h3 {
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+.foot p,
+.foot a {
+  margin: 5px 0;
+  font-size: 17px;
+  padding-top: 1.25rem;
+  color: white;
+  text-decoration: none;
+}
+
+.foot a:hover {
+  color: #89760b;
+}
+
+.latest-post p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.latest-post p img {
+  width: 150px;
+  height: 100px;
+  margin-right: 40px;
+  margin: 10px;
+}
+
+.latest-post p a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding-top: 40px;
+  font-size: 15px;
+}
+
+.footer .social a {
+  display: inline-block;
+  margin: 0 5px;
+  margin-top: 20px;
+}
+
+.footer .social a img {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+.footer .subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .subscribe input[type="email"] {
+  padding: 17px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #009444;
+  border: 2px solid #009444;
+}
+
+.copyright {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.copyright:hover {
+  color: blue;
+}
+
+/* Responsive styles for tablets and smaller devices */
+@media (max-width: 768px) {
+  .articles {
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .popular-article {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .article-item {
+    width: 90%;
+    height: auto;
+  }
+
+  .upper {
+    height: 150px;
+    margin-top: 15px;
+  }
+
+  .upper .upper-content h1 {
+    font-size: 28px;
+  }
+
+  .upper .upper-content p {
+    font-size: 16px;
+  }
+
+  .footer .foot {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer .foot > div {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .foot h3 {
+    font-size: 24px;
+  }
+
+  .foot p,
+  .foot a {
+    font-size: 15px;
+  }
+
+  .latest-post p {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer .social a img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  .footer .social a img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer .subscribe input[type="email"] {
+    padding: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+ 
+}

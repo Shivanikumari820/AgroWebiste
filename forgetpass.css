@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Video Styling */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers entire screen */
+  z-index: -1; /* Moves the video behind other elements */
+}
+
+/* Wrapper (Form Box) */
+.wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 350px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Form Styling */
+h2 {
+  color: #341414;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.input-field {
+  position: relative;
+  margin: 15px 0;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus {
+  border-color: #00ff88;
+  transform: scale(1.05);
+}
+
+.button-link button {
+  width: 100%;
+  background: linear-gradient(90deg, #00ff88, #00b3ff);
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+
+.button-link button:hover {
+  background: linear-gradient(90deg, #00b3ff, #00ff88);
+  transform: scale(1.05);
+}
+
+.login {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.login a {
+  color: #06100b;
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .wrapper {
+      width: 90%;
+  }
+}
