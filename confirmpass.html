@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="confirmpass.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="confirmpass.css">
 </head>
 <body>
+  <video autoplay loop muted class="bg-video">
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  
   <div class="wrapper">
     <form action="#">
-      <h2>Reset Password</h2>
-      <div class="input-field">
-        <input type="password" id="new-password" required />
-        <label>Enter new password</label>
-        <p class="password-requirements">Password must be at least 8 characters long, contain a capital letter and a special character.</p>
-      </div>
-      <div class="input-field">
-        <input type="password" id="confirm-password" required />
-        <label>Confirm new password</label>
-      </div>
-      <a href="index.html" class="button-link"
-        ><button type="button" onclick="validatePassword()">Submit</button></a
-      >
-      <div class="login">
-        <p>Remembered? <a href="login.html">Login</a></p>
-      </div>
-    </form>
+      <h1>Reset Password</h1>
+      <div class="input-box">
+        <input type="text" required placeholder="Enter new password">
+    </div>
+    <div class="input-box">
+      <input type="password" required placeholder="Confirm new Password">
+  </div>  <a href="index.html">
+    <button type="button" class="btn">Submit</button>
+  </a>
+      <div class="account"> Remembered?
+        <a href="login.html">Login</a>
+    </div>
   </div>
-  <script src="reset-password.js"></script>
-
-
+       
+  
+       
+    </form>
+</div>
 </body>
 </html>

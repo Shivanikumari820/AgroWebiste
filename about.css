@@ -1,3 +1,4 @@
+/* General reset for padding, margin, and box-sizing */
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +6,9 @@
 }
 
 body {
-  width: 100%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  box-sizing: border-box;
+
 }
 
 /* Navbar styling */
@@ -26,13 +27,13 @@ body {
 }
 
 .navbar .logo-container img {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
 }
 
 .navbar h1 {
-  font-size: 40px;
+  font-size: 30px;
   color: #121f07;
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
@@ -47,7 +48,7 @@ body {
 }
 
 .navbar nav li a {
-  color: black;
+  color: rgb(20, 5, 5);
   text-decoration: none;
   padding: 10px;
 }
@@ -58,9 +59,14 @@ body {
   text-decoration: underline;
 }
 
+.navbar i{
+  font-size: 20px;
+}
 .navbar a i {
   font-size: 24px;
   color: black;
+  /* order: 1; */
+  /* position:absolute; */
 }
 
 .navbar a i:hover{
@@ -81,17 +87,17 @@ body {
   cursor: pointer;
 }
 
-.menu-icon div {
-  width: 25px;
-  height: 3px;
-  background-color: black;
+
+.menu-icon i {
+  font-size: 20px;
+  color: #333;
+  transition: transform 0.3s ease;
 }
 
-/* Button styles */
 .butt button {
   background-color: #1db622;
   color: rgb(6, 4, 4);
-  padding: 12px 24px;
+  padding: 1vh 1vw;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -104,20 +110,23 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .navbar nav ul {
     display: none;
     /* width: 100%; */
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 60px;
-    left: 0;
+    top: 50px;
+    left: 270px;
+    /* right: 0; */
     background-color: rgba(255, 255, 255, 0.9);
     transition: 0.3s;
+    /* transform: translateX(5vw); */
+    transform: translateY(2vw);
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    column-gap: 1px; 
   }
-
   .navbar nav ul li {
     margin: 10px 0;
     width: 100%;
@@ -128,6 +137,17 @@ body {
     padding: 10px;
     width: 100%;
     display: block;
+  }
+  .navbar h1 {
+    font-size: 25px;
+  }
+
+.navbar a button{
+  font-size:12px;
+}
+
+  .navbar a i{
+       font-size: 25px;
   }
 
   .menu-icon {
@@ -147,65 +167,206 @@ body {
     display: flex;
   }
 }
+/* Responsive Design */
+@media (max-width: 430px) {
+  .navbar nav ul {
+    display: none;
+    /* width: 100%; */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    left: 270px;
+    /* right: 0; */
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: 0.3s;
+    /* transform: translateX(5vw); */
+    transform: translateY(2vw);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    column-gap: 1px; 
+  }
+
+  .navbar nav ul li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar nav ul li a {
+    padding: 10px;
+    width: 100%;
+    display: block;
+  }
+  .navbar h1 {
+    font-size: 20px;}
   
 
-  .aboutimage{
-    margin-top: -80px;
+.navbar a button{
+  font-size:12px;
+}
+
+  .navbar a i{
+       font-size: 25px;
   }
 
-  .aboutimage img{
-    width:100%;
-    height: 760px;
-  }
-
-  .heading h2{
-    margin-top: -520px;
-    font-size: 50px;
-    color: rgb(6, 5, 5);
-    padding-bottom: 10px;
+  .menu-icon {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
   }
-  
-  .heading p{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: -10px;
-    color: rgb(11, 9, 9);
+ 
+  .navbar .menu-icon i{
     font-size: 20px;
+
   }
 
-  .hero-content2{
-    width:100%;
-    background-color: rgb(111, 165, 115);
-    padding-top:500px;
-    padding-left: 120px;
-    padding-right: 130px;
-    
+  .navbar .cart a i{
+    font-size: 20px;
+
+  }
+
+  /* .navbar .cart a i.active{
+    transform: translatey(-5px);
+  } */
+
+  #menu-toggle:checked + label + nav ul {
+    display: flex;
+  }
+}
+
+.aboutimage {
+  /* position: relative; */
+  width: 100%;
+  overflow: hidden;
+}
+
+.aboutimage img {
+  width: 100%;
+  height: 700px;
+  max-height: 1000px; /* अधिकतम ऊँचाई सेट करें */
+}
+
+.heading h2 {
+  /* position: relative; */
+  font-size: 50px;
+  color: rgb(6, 5, 5);
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -520px; /* नकारात्मक मार्जिन हटाएं */
+}
+
+.heading p {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: -10px;
+  color: rgb(11, 9, 9);
+  font-size: 20px;
+}
+
+/* मोबाइल और टैबलेट के लिए उत्तरदायी परिवर्तन */
+@media (max-width: 768px) {
+  .heading h2 {
+  /* position: relative; */
+    font-size: 36px;
+  }
+
+  .heading p {
+  /* position: relative; */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutimage img {
+    height: auto;
+    /* max-height: 600px; सुनिश्चित करें कि छवि का अनुपात सही रहे */
+  }
+
+  .heading h2 {
+  /* position: relative; */
+    font-size: 28px;
+    margin-top: -200px;
+  }
+
+  .heading p {
+  /* position: relative; */
+    font-size: 14px;
+  }
+}
+
+
+
+.hero-content2 {
+  width: 100%;
+  background-color: rgb(111, 165, 115);
+  padding: 15px 15px 15px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  margin-top: 398px;
+}
+
+.hero-content2 h5 {
+  padding-bottom: 10px;
+  padding-top: 25px;
+  color: #090808;
+  font-size: 1.2rem;
+}
+
+.hero-content2 h1 {
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.hero-content2 p {
+  text-align: justify;
+  color: #130f0f;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content2 h5 {
+    font-size: 1rem;
+  }
+
+  .hero-content2 h1 {
+    font-size: 2rem;
   }
   
-  .hero-content2 h5{
-    padding-bottom: 10px;
-    padding-top: 25px;
-    
-    
-   } 
+  .hero-content2 p {
+    font-size: 0.9rem;
+  }
+}
 
-   .hero-content2 h1{
-    font-size: 50px;
-    padding-bottom: 10px;
-  
-   }
+@media (max-width: 480px) {
+  .hero-content2 {
+    margin-top: 145px; 
+    padding: 30px 10px 10px;
+  }
 
-   .hero-content2 p{
-    text-align: justify;
-   }
-   
+  .hero-content2 h5 {
+    font-size: 0.9rem;
+  }
+
+  .hero-content2 h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content2 p {
+    font-size: 0.8rem;
+  }
+}
+
+
    .vision-mission {
      display: flex;
      padding-left: 110px;
@@ -220,6 +381,7 @@ body {
     align-items: center;
     text-align: center;
     margin: 0 10px;
+    
   }
   
   .vision img,
@@ -255,11 +417,9 @@ body {
 /* Objective section */
 
 .objective-section {
-  margin-top: 8px;
+  margin-top: 1px;
   padding: 50px;
-  /* background-color: #f9f9f9; */
   background-color: rgb(111, 165, 115);
-  
 }
 
 .objective {
@@ -274,10 +434,9 @@ body {
 }
 
 .objective h1 {
-  color: #2e7d32;
+  color: rgb(9, 6, 6);
   font-size: 3em;
   margin: 10px 0 30px 0;
-  color: rgb(9, 6, 6);
 }
 
 .objective-items {
@@ -293,9 +452,14 @@ body {
   margin: 20px;
   padding: 20px;
   flex: 1;
-  max-width: 40%;
+  max-width: 30%;
   min-width: 250px;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.objective-item:hover {
+  transform: translateY(-10px);
 }
 
 .objective-item img {
@@ -315,57 +479,176 @@ body {
   line-height: 1.4;
 }
 
-/* management */
+/* मोबाइल व्यू */
+@media (max-width: 768px) {
+  .objective h1 {
+    font-size: 2.5em;
+  }
 
+  .objective-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .objective-item {
+    max-width: 80%;
+    margin: 10px 0;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .objective h1 {
+    font-size: 3.5em;
+  }
+
+  .objective-items {
+    justify-content: space-around;
+  }
+
+  .objective-item {
+    max-width: 22%;
+  }
+}
+
+
+
+/* management */
 .management-section {
-  margin-top: 8px;
-    text-align:center;
+  margin-top: 1px;
+  text-align: center;
+  padding: 30px;
+  background-color: rgb(136, 211, 141);
+  padding-bottom: 200px;
+}
+
+.management {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.management-section h1 {
+  color: #043e04;
+  font-size: 40px;
+}
+
+.management-section h2 {
+  color: #030404;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.member {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 10px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.member:hover {
+  transform: scale(1.05);
+}
+
+.member img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+}
+
+.member h3 {
+  margin: 10px 0 5px;
+  color: #2e7d32;
+  font-size: 16px;
+}
+
+.member p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+
+
+@media (max-width: 768px) {
+  .management {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .member {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .management-section h1 {
+    font-size: 32px;
+  }
+  .management-section {
+    margin-top: 1px;
+    text-align: center;
     padding: 30px;
-    background-color: rgb(91, 200, 99);
+    background-color: rgb(136, 211, 141);
     padding-bottom: 200px;
   }
   
-  .management {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    gap: 25px;
-  }
-
   .management-section h1 {
     color: #043e04;
     font-size: 40px;
   }
   
   .management-section h2 {
-    color: #030404; 
+    color: #030404;
     margin-top: 20px;
     margin-bottom: 30px;
   }
-
+  
+  .management {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+  }
   
   .member {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
     padding: 10px;
     height: 300px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .member:hover {
+    transform: scale(1.05);
   }
   
   .member img {
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 15px;
   }
   
   .member h3 {
     margin: 10px 0 5px;
-    color: #2e7d32; /* Green color */
+    color: #2e7d32;
     font-size: 16px;
   }
   
@@ -374,6 +657,33 @@ body {
     color: #555;
     font-size: 14px;
   }
+  
+
+  
+
+  @media (max-width: 430px) {
+    .management-section {
+      padding: 20px;
+      padding-bottom: 100px;
+    }
+    .member {
+      width: 90%;
+      margin-bottom: 15px;
+    }
+  
+    .management-section h1 {
+      font-size: 28px;
+    }
+  
+    .management-section h2 {
+      font-size: 22px;
+    }
+
+
+    }
+  }
+  
+
 /* footer */
 .upper {
   position: relative;
