@@ -669,7 +669,7 @@ body {
   text-align: center;
   margin: 20px auto;
   background-color: rgb(111, 165, 115);
-  padding: 20px;
+  height: 800px;
   margin-top: 10px;
   align-items: center;
 }
@@ -800,7 +800,7 @@ body {
   align-items: center;
   color: white;
   text-align: center;
-  margin-top: -150px;
+  margin-top: -160px;
 }
 
 .upper .upper-content {
