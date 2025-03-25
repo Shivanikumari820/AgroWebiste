@@ -275,12 +275,11 @@ body {
 }
 
 .content h5 {
-  font-size: 35px;
-  /* font-family: "Boldonse", system-ui;
-  font-style: italic; */
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 10;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+   font-family: "Boldonse", system-ui;
+  }
 
 /* Section with buttons */
 
